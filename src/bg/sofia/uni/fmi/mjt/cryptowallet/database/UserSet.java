@@ -25,7 +25,6 @@ public class UserSet implements AutoCloseable {
         loadData(usersFilePath);
     }
 
-    @SuppressWarnings("checkstyle:EmptyBlock")
     public void loadData(String path) {
         try {
             Files.createDirectories(Paths.get("database"));
