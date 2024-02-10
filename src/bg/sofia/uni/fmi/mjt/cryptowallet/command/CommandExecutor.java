@@ -44,8 +44,8 @@ public class CommandExecutor {
     private static final String DISCONNECTED_SUCCESSFULLY = "Disconnected successfully.";
     private static final String SHUTDOWN_MESSAGE = "Server was shutdown.";
 
-    private static final int NUMBER_OF_ARGUMENTS_BUY_CRYPTO_AND_LOGIN_AND_REGISTER = 2;
-    private static final int NUMBER_OF_ARGUMENTS_DEPOSIT_AND_SELL_CRYPTO = 1;
+    private static final int NUMBER_OF_ARGUMENTS_BUY_AND_LOGIN_AND_REGISTER = 2;
+    private static final int NUMBER_OF_ARGUMENTS_DEPOSIT_AND_SELL = 1;
 
     private final UserSet users;
     private final Set<User> currentlyInUse;
@@ -92,7 +92,7 @@ public class CommandExecutor {
             return ALREADY_LOGGED_IN;
         }
 
-        if (args.length != NUMBER_OF_ARGUMENTS_BUY_CRYPTO_AND_LOGIN_AND_REGISTER) {
+        if (args.length != NUMBER_OF_ARGUMENTS_BUY_AND_LOGIN_AND_REGISTER) {
             return INVALID_ARGUMENTS;
         }
 
@@ -114,7 +114,7 @@ public class CommandExecutor {
         if (key.attachment() != null) {
             return ALREADY_LOGGED_IN;
         }
-        if (args.length != NUMBER_OF_ARGUMENTS_BUY_CRYPTO_AND_LOGIN_AND_REGISTER) {
+        if (args.length != NUMBER_OF_ARGUMENTS_BUY_AND_LOGIN_AND_REGISTER) {
             return INVALID_ARGUMENTS;
         }
 
@@ -158,7 +158,7 @@ public class CommandExecutor {
         }
         User user = (User) key.attachment();
 
-        if (args.length != NUMBER_OF_ARGUMENTS_DEPOSIT_AND_SELL_CRYPTO) {
+        if (args.length != NUMBER_OF_ARGUMENTS_DEPOSIT_AND_SELL) {
             return INVALID_ARGUMENTS;
         }
 
@@ -188,7 +188,7 @@ public class CommandExecutor {
         }
         User user = (User) key.attachment();
 
-        if (args.length != NUMBER_OF_ARGUMENTS_BUY_CRYPTO_AND_LOGIN_AND_REGISTER) {
+        if (args.length != NUMBER_OF_ARGUMENTS_BUY_AND_LOGIN_AND_REGISTER) {
             return INVALID_ARGUMENTS;
         }
 
@@ -215,7 +215,7 @@ public class CommandExecutor {
         }
         User user = (User) key.attachment();
 
-        if (args.length != NUMBER_OF_ARGUMENTS_DEPOSIT_AND_SELL_CRYPTO) {
+        if (args.length != NUMBER_OF_ARGUMENTS_DEPOSIT_AND_SELL) {
             return INVALID_ARGUMENTS;
         }
 
